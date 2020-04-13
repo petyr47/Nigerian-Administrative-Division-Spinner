@@ -1,0 +1,3 @@
+rootProject.name='NigerianAdministrativeDivisionSpinner'
+include ':app'
+include ':nigerianadministrativedivisionspinner'
