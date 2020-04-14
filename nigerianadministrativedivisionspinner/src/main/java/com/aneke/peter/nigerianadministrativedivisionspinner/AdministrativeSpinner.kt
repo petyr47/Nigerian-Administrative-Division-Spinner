@@ -4,8 +4,6 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.widget.LinearLayout
 import com.aneke.peter.nigerianadministrativedivisionspinner.models.Lga
 import com.aneke.peter.nigerianadministrativedivisionspinner.models.State
 
@@ -21,9 +19,9 @@ class AdministrativeSpinner constructor(context: Context, attrs: AttributeSet)  
     var lgaList = emptyList<Lga>()
 
     init {
-
         attrset = context.obtainStyledAttributes(attrs, R.styleable.AdministrativeSpinner)
         level = attrset.getInt(R.styleable.AdministrativeSpinner_admin_level, 0)
+        setupListAndAdapters()
         attrset.recycle()
     }
 
