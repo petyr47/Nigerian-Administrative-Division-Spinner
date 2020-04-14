@@ -16,6 +16,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    dataBinding{
+        enabled = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -34,4 +38,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Admin spinner
+    implementation 'com.github.petyr47:Nigerian-Administrative-Division-Spinner:0.0.1'
+
+    //material deisgn components
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
+
+    //viewmodel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-rc02"
+
 }
