@@ -25,10 +25,17 @@ class AdministrativeSpinner constructor(context: Context, attrs: AttributeSet)  
         attrset.recycle()
     }
 
-
-    fun setCurrentState(state: State){
+    /*
+    *
+    * This sets up the list for a lga level spinner
+    * It throws an IllegalArgumentException is the input string is not a valid State name
+    * This should not occur if you use the state names provided in getAllStates()
+    * */
+    fun setCurrentState(state: String){
+        val stateObject = State(name = state)
+        if (!getAllStates().contains(stateObject)) throw IllegalArgumentException("The Input Argument $state is not a valid State Name")
         if (level == 1){
-            lgaList = getLocalGovernmentsForState(state)
+            lgaList = getLocalGovernmentsForState(stateObject)
             setupListAndAdapters()
         }
     }
